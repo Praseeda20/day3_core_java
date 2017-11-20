@@ -1,16 +1,16 @@
+ enum Gender{M,F};
 public class Person {
 	private String firstName;
 	private String lastName;
-	char gender;
+	Gender gender;
 	private long phoneNo;	
 	
-	public Person(String firstName, String lastName, char gender) {
+	public Person(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.gender = gender;
 	}
 
-	public Person(String firstName, String lastName, char gender, long phoneNo) {
+	public Person(String firstName, String lastName, Gender gender, long phoneNo) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -20,9 +20,7 @@ public class Person {
 
 
 	public Person() {
-		
-	}
-
+		}
 
 	public String dispDetails() {
 		return "Person Details:\n-----------------------\nFirst Name:" + firstName + "\nLast Name:" + lastName
